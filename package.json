@@ -1,13 +1,13 @@
 {
-  "name": "storybook-addon-tutorial",
+  "name": "storybook-addon-rem",
   "version": "0.0.0",
-  "description": "An addon based on the Outline tutorial.",
+  "description": "A Storybook addon which allows you to change the root font size from the toolbar.",
   "keywords": [
     "storybook-addons"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bpb54321/storybook-addon-tutorial"
+    "url": ""
   },
   "type": "module",
   "license": "MIT",
