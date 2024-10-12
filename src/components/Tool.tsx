@@ -5,18 +5,22 @@ import { ADDON_ID, KEY, TOOL_ID } from "../constants";
 import { LightningIcon } from "@storybook/icons";
 
 export const Tool = memo(function MyAddonSelector({ api }: { api: API }) {
+  debugger;
+  console.log("In Tool component");
   const [globals, updateGlobals, storyGlobals] = useGlobals();
 
   const isLocked = KEY in storyGlobals;
   const isActive = !!globals[KEY];
 
   const toggle = useCallback(() => {
+    console.log("In toggle");
     updateGlobals({
       [KEY]: !isActive,
     });
   }, [isActive]);
 
   useEffect(() => {
+    console.log("In useEffect");
     api.setAddonShortcut(ADDON_ID, {
       label: "Toggle Measure [O]",
       defaultShortcut: ["O"],

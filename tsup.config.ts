@@ -45,10 +45,15 @@ export default defineConfig(async (options) => {
 
   const commonConfig: Options = {
     splitting: false,
-    minify: !options.watch,
+    minify: false,
     treeshake: true,
     sourcemap: true,
     clean: options.watch ? false : true,
+    terserOptions: {
+      compress: {
+        drop_console: false, // Ensure console logs are not dropped
+      },
+    },
   };
 
   const configs: Options[] = [];
