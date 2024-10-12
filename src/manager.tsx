@@ -13,7 +13,7 @@ addons.register(ADDON_ID, (api) => {
   // Register a tool
   addons.add(TOOL_ID, {
     type: types.TOOL,
-    title: "My addon",
+    title: "Root font size toggler",
     match: ({ viewMode }) => viewMode === "story",
     render: () => <Tool api={api} />,
   });
